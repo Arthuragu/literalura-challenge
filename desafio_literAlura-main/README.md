@@ -1,34 +1,44 @@
-﻿<h1> Desafio LiterAlura </h1>
+# 📚 Literalura - Catálogo de Livros e Autores
 
-<h2> Sobre </h2>
-<p> Desafio desenvolvido no curso de Java e Spring Framework G9 - ONE  </p>
+Projeto desenvolvido em Java utilizando Spring Boot com o objetivo de criar um sistema para armazenar e consultar livros e autores em um banco de dados relacional.
 
-<h2> Funcionalidades</h2>
-<p> Criar um banco de dados para armazenar livros e autores </p>
-<p> Buscar no banco de dados com diferentes parâmetros ou listar todos os livros e autores </p>
-<p> Livros possuem Título, Idioma, Autor e Número de Downloads </p>
-<p> Autores possuem Nome e data de nascimento e falescimento </p>
+---
 
-<h2> Como Utilizar? </h2>
-<p> É preciso ter um banco de dados PostgreSQL com o nome "literalura" para o programa funcionar. Editar o arquivo "application.properties" para satisfazer as necessidades</p>
-<p> Ao executar o programa, a linha de comando irá mostrar um menu com 5 diferentes opções </p>
-<p> 1- Buscar Livro pelo título: Informe o nome do livro e o programa irá adicionar o primeiro livro retornado, junto do primeiro Autor do mesmo.  </p>
-<p> 2/3- Listar Livros/Autores Registrados: Retorna os respectivos dados de todos adicionados no banco de dados </p> 
-<p> 4- Listar Autores vivos e determinado ano: Informe um ano e o programa irar listar todos os autores vivos </p>
-<p> 5- Listar Livros em determinado Idioma: retorna uma lista com todos os livros que possuem o idioma informado </p>
-<p> 6- Listar o top 10 de livros com maior número de downloads </p>
+## 🚀 Objetivo do Projeto
 
-<h2> Tecnologias </h2>
-<div>
-  <p>PostgreSQL (Banco de dados) </p>
-  <p>Java </p>
-  <p>SpingBoot Framework </p>
-  <p>API Gutendex para busca de livros - Link: https://gutendex.com </p>
-</div>
+Criar uma aplicação que:
 
-<h2> Autor </h2>
-<p> Desenvolvido por Tiago Flores Lindner </p>
+- Armazene livros e autores em um banco de dados
+- Permita consultas com diferentes filtros
+- Demonstre o uso de JPA, Hibernate e PostgreSQL
+- Simule um cenário real de desenvolvimento Back-End
 
-[![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Tiago-Lindner)
+---
 
-[![Discord](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/tiago-flores-lindner)
+## 🗃 Modelagem do Banco de Dados
+
+### 📘 Autor
+- id
+- nome
+- dataNascimento
+- dataFalecimento
+
+### 📗 Livro
+- id
+- titulo
+- idioma
+- numeroDownloads
+- autor_id (chave estrangeira)
+
+### 🔗 Relacionamento
+
+Um autor pode ter vários livros:
+
+
+## 🛠 Tecnologias Utilizadas
+
+- ☕ Java 17+
+- 🌱 Spring Boot
+- 🗄 Spring Data JPA
+- 🐘 PostgreSQL
+- 🔧 Maven
